@@ -1,0 +1,25 @@
+@import 'partials/hud';
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+main {
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+}
+.board {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 400px);
+    grid-template-rows: repeat(13, 250px);
+    row-gap: 10px;
+    background-color: rgb(31, 31, 31);
+}
+.tile {
+    box-sizing: border-box;
+    //border: 1px black solid;
+
+    background-image: url("../pixelart/pixelWall.png");
+}

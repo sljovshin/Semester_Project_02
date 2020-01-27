@@ -1,0 +1,132 @@
+const Factions = {
+    targaryen: {
+        lord: { 
+            name: "Daenerys Targaryen",
+            title: "Mother of Dragons",
+            health: 60,
+            ability: "Inspire"
+        },
+        roster: {
+            epic: {
+                name: "Dragon",
+                attack: 13,
+                health: 5,
+                ability: "Terrify"
+            },
+            rare: {
+                name: "Dothraki Bloodrider",
+                attack: 8,
+                health: 4,
+            },
+            common: {
+                name: "Unsullied",
+                attack: 4,
+                health: 2,
+            }
+        }
+     },
+    stark: {
+        lord: { 
+            name: "Jon Snow",
+            title: "King in the North",
+            health: 60,
+            ability: "Bolster"
+        },
+        roster: {
+            epic: {
+                name: "Dire Wolf",
+                attack: 9,
+                health: 9,
+                ability: "Swift",
+            },
+            rare: {
+                name: "Stark Solider",
+                attack: 5,
+                health: 7,
+            },
+            commom: {
+                name: "Northmen",
+                attack: 3,
+                health: 3,
+            }
+        }
+     },
+    lannister: {
+        lord: { 
+            name: "Cersei Lannister",
+            title: "The Mother of Madness",
+            health: 60,
+            ability: "Unlimited funds"
+        },
+        roster: {
+            epic: {
+                name: "The Mountain",
+                attack: 10,
+                health: 8,
+                ability: "Regenerate"
+            },
+            rare: {
+                name: "Lannister Knight",
+                attack: 6,
+                health: 6,
+            },
+            common: {
+                name: "Lannister Footman",
+                attack: 3,
+                health: 3,
+            }
+        }
+     },
+    freefolk: {
+        lord: { 
+            name: "Mance Rayder",
+            title: "King of the Free Folk",
+            health: 60,
+            ability: "Camofluage"
+        },
+        roster: {
+            epic: {
+                name: "Giant",
+                attack: 9,
+                health: 9,
+                ability: "Stun"
+            },
+            rare: {
+                name: "Thenn Berserker",
+                attack: 9,
+                health: 3,
+            },
+            common: {
+                name: "Wildling",
+                attack: 4,
+                health: 2,
+            }
+        }
+     },
+    whitewalkers: {
+        lord: { 
+            name: "Night King",
+            title: "King of the Dead",
+            health: 60,
+            ability: "Re-animate rare"
+        },
+        roster: {
+            epic: {
+                name: "White Walker",
+                attack: 5,
+                health: 13,
+                ability: "rise wight"
+            },
+            rare: {
+                name: "Re-animated rare",
+                attack: null,
+                health: null
+            },
+            common: {
+                name: "Wights",
+                attack: 2,
+                health: 4
+            }
+        }
+     }
+};
