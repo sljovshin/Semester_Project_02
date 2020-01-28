@@ -16,10 +16,17 @@ main {
     grid-template-rows: repeat(13, 250px);
     row-gap: 10px;
     background-color: rgb(31, 31, 31);
+    border: 1px black solid;
 }
 .tile {
     box-sizing: border-box;
-    //border: 1px black solid;
+    border-right: 1px black solid;
+    background-image: url("../assets/hallway.png");
+}
 
-    background-image: url("../pixelart/pixelWall.png");
+.tileStairsDown {
+    background-image: url("../assets/hallwayStairsDown.png") !important;
+}
+.tileStairsUp {
+    background-image: url("../assets/hallwayStairsUp.png") !important;
 }

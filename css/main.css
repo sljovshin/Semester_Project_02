@@ -48,11 +48,21 @@ main {
       grid-template-rows: repeat(13, 250px);
   row-gap: 10px;
   background-color: #1f1f1f;
+  border: 1px black solid;
 }
 
 .tile {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url("../pixelart/pixelWall.png");
+  border-right: 1px black solid;
+  background-image: url("../assets/hallway.png");
+}
+
+.tileStairsDown {
+  background-image: url("../assets/hallwayStairsDown.png") !important;
+}
+
+.tileStairsUp {
+  background-image: url("../assets/hallwayStairsUp.png") !important;
 }
 /*# sourceMappingURL=main.css.map */
