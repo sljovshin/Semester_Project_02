@@ -26,4 +26,9 @@ main {
   width: 400px;
   display: none;
 }
+
+.char {
+  height: 90px;
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

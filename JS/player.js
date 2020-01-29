@@ -3,10 +3,17 @@ let down = false;
 let left = false;
 let right = false;
 
+function drawChar(char, x, y, charW, CharH) {
+    return context.drawImage(char, x, y, charW, CharH);
+}
+
 let player = {
+    idle: document.getElementById('jonSnowIdle'),
+    walk: document.getElementById('jonSnowWalk'),
     x: 40,
-    y: 170,
-    r: 30,
+    y: 90,
+    height: 110,
+    width: 75,
     color: 'green',
     vx: 3,
     vy: 3,
@@ -60,11 +67,12 @@ function playerMove() {
 function drawPlayer() {
     context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
     drawBackground(context);
-    context.beginPath();
-    context.fillStyle = player.color;
-    context.arc(player.x, player.y, player.r, 0 , 2 * Math.PI);
-    context.fill();
-    context.closePath();
+    if (right === false || left === false) {
+        drawChar(player.idle, player.x, player.y, player.width, player.height)
+    } else {
+        drawChar(player.walk, player.x, player.y, player.width, player.height)
+    }
+    
     playerMove();
        
     requestAnimationFrame(drawPlayer);
