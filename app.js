@@ -2,7 +2,7 @@ console.log('we are live');
 
 
 const rooms = document.getElementsByClassName('tile');
-let roomArray = [...rooms]
+let roomArray = [...rooms];
 console.log(roomArray);
 
 
