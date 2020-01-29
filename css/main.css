@@ -1,28 +1,3 @@
-.hud-container {
-  position: relative;
-  z-index: 1;
-}
-
-.hud, .right-hud, .left-hud {
-  position: fixed;
-  height: 300px;
-  width: 30%;
-  bottom: 0;
-  background-color: grey;
-}
-
-.right-hud {
-  -webkit-clip-path: polygon(9% 62%, 100% 45%, 100% 100%, 0% 100%);
-          clip-path: polygon(9% 62%, 100% 45%, 100% 100%, 0% 100%);
-  right: 0;
-}
-
-.left-hud {
-  -webkit-clip-path: polygon(0 46%, 94% 65%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 46%, 94% 65%, 100% 100%, 0% 100%);
-  left: 0;
-}
-
 html, body {
   padding: 0;
   margin: 0;
@@ -32,37 +7,23 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 1600;
+  padding-top: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 75px;
 }
 
-.board {
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  -ms-grid-columns: (400px)[4];
-      grid-template-columns: repeat(4, 400px);
-  -ms-grid-rows: (250px)[13];
-      grid-template-rows: repeat(13, 250px);
-  row-gap: 10px;
-  background-color: #1f1f1f;
-  border: 1px black solid;
-}
-
-.tile {
+.canvas {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-right: 1px black solid;
-  background-image: url("../assets/hallway.png");
+  border: 1px black solid;
+  background-color: black;
 }
 
-.tileStairsDown {
-  background-image: url("../assets/hallwayStairsDown.png") !important;
-}
-
-.tileStairsUp {
-  background-image: url("../assets/hallwayStairsUp.png") !important;
+.roomtile {
+  height: 250px;
+  width: 400px;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
