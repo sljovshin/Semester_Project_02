@@ -76,7 +76,6 @@ var currentFrame = 0;
 function drawPlayer() {
     context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
     drawBackground(context);
-    console.log(right);
     
     if (left) {
         drawIdle(player.left, player.x, player.y, player.width, player.height)

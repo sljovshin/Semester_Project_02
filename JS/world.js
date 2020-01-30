@@ -66,11 +66,11 @@ function defineRooms() {
 
         
         x = xX;
-        xX = xX + (width + 1); 
+        xX = xX + (width); 
 
         if (x > 4 * width) {
             y = yY;
-            yY = yY +(height + 1);
+            yY = yY +(height);
             x = 0;
             xX = x + width
         }
