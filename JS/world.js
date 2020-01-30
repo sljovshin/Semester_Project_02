@@ -38,9 +38,9 @@ function drawBackground(context) {
             }
         })
 
-        x = x + roomWidth + 1;      
-        if (x > 4 * roomWidth) {
-            y = y + roomHeight + 1;
+        x = x + roomWidth;      
+        if (x >= 4 * roomWidth) {
+            y = y + roomHeight;
             x = 0;
         }
     }
