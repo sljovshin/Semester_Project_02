@@ -1,6 +1,6 @@
 let dice;
 const diceRoll = () => {
-    dice = Math.floor((Math.random()*5 + 1)) * 400;
+    dice = 7 * 400 //Math.floor((Math.random()*5 + 1)) * 400;
 }
 
 
@@ -32,23 +32,26 @@ function move() {
     
 
     if(player.x > 1450 && playerDoneMoving === false) {
-        player.x = 1440;
+        player.x = 1400;
+        moved = moved - 50;
         player.y += 250;
-        moved -= 200;
+        console.log('going down');
+        
         window.scroll({
             top: player.y,
             behavior: 'smooth'
           });
-    }
-
-    if(player.x < 150 && playerDoneMoving === false) {
-        player.x = 160;
+    } else if (player.x < 150 && playerDoneMoving === false) {
+        player.x = 200;
+        moved = moved - 50;
         player.y += 250;
-        moved -= 200;
+        console.log('going down');
         window.scroll({
             top: player.y,
             behavior: 'smooth'
           });
+    } else {
+        moved += player.vx;
     }
 
     if(player.x > 1400 && player. y > 3000) {
@@ -58,7 +61,7 @@ function move() {
         return;
     }
 
-    moved += player.vx;
+    
     if(moved > dice) {
         console.log(moved > dice);
         moving = false;
@@ -66,6 +69,7 @@ function move() {
         cancelAnimationFrame(move);
         return;
     }
+
     requestAnimationFrame(move);
 }
 /*

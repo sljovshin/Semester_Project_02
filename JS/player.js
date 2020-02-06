@@ -8,11 +8,8 @@ let wentDown = false;
 let wentUp = false;
 let direction;
 
-function drawIdle(char, x, y, charW, CharH) {
+function drawCharacter(char, x, y, charW, CharH) {
     return context.drawImage(char, x, y, charW, CharH);
-}
-function drawWalk(char, shift, sY,sW, sH, x, y, charW, CharH) {
-    return context.drawImage(char, shift, sY,sW, sH, x, y, charW, CharH);
 }
 
 
@@ -89,24 +86,17 @@ function determinDirection() {
 }
 
 let lastDir = player.right;
+
+
 function drawPlayer() {
-    
-    context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
-    drawBackground(context);
-    playerLocationDetection(); 
     if (left) {
-        drawIdle(player.left, player.x, player.y, player.width, player.height)
+        drawCharacter(player.left, player.x, player.y, player.width, player.height)
         lastDir = player.left;
     } else if (right) {
-        drawIdle(player.right, player.x, player.y, player.width, player.height)
+        drawCharacter(player.right, player.x, player.y, player.width, player.height)
         lastDir = player.right;
     } else {
-        drawIdle(lastDir, player.x, player.y, player.width, player.height)
+        drawCharacter(lastDir, player.x, player.y, player.width, player.height)
     }
-    
-    playerMove();
-    drawRoom(gateoverlap, 367, 0, 33, 250);
-    determinDirection();
-    
-    requestAnimationFrame(drawPlayer);
 }
+

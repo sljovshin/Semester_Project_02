@@ -1,7 +1,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  overflow-y: hidden;
 }
 
 main {
@@ -30,6 +29,11 @@ main {
 
 .char {
   height: 90px;
+  display: none;
+}
+
+.boss {
+  height: 130px;
   display: none;
 }
 

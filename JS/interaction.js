@@ -62,13 +62,21 @@ function stairDown(i) {
         wentDown = true;       
         player.x = stairsup[i].x + 168;
         player.y = stairsup[i].y + 90;
+        window.scroll({
+            top: player.y,
+            behavior: 'smooth'
+          });
     }
 }
 function stairsUp(i) {
     if (!moving && !wentDown && playerDoneMoving) {
         wentUp = true;
-        player.x = stairsdown[i].x;
-        player.y = stairsdown[i].y;
+        player.x = stairsdown[i].x + 168;
+        player.y = stairsdown[i].y + 90;
+        window.scroll({
+            top: player.y,
+            behavior: 'smooth'
+          });
     }
 }
 
