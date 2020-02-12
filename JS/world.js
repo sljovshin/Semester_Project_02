@@ -12,6 +12,7 @@ let halldown = document.getElementById('hallwayDown');
 
 let rooms= [];
 
+console.log(window.innerHeight - 230)
 
 
 const randomRoom = () => {

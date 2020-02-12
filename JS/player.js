@@ -2,7 +2,7 @@ let up = false;
 let down = false;
 let left = false;
 let right = false;
-let playerDoneMoving = false;
+let playerDoneMoving = true;
 let moving = false;
 let wentDown = false;
 let wentUp = false;
@@ -14,16 +14,14 @@ function drawCharacter(char, x, y, charW, CharH) {
 
 
 let player = {
-    left: document.getElementById('jonSnowL'),
-    right: document.getElementById('jonSnowR'),
+    leftSprite: document.getElementById('jonSnowL'),
+    rightSprite: document.getElementById('jonSnowR'),
     x: 168,
     y: 90,
     height: 110,
     width: 76,
-    color: 'green',
     vx: 5,
     vy: 6,
-    hitpoints: 3,
 }
 
 document.addEventListener('keydown', (event) => {
@@ -71,30 +69,18 @@ function playerMove() {
     }
 }
 
-function determinDirection() {
-    for (let i = 0; i < levels.length; i++) {
-        if (player.y > levels[i].y && player.y < levels[i].yY) {
-            if (levels[i].level % 2 === 1) {
-                left = false;
-                right = true;
-            } else {
-                right = false;
-                left = true;
-            }
-        }
-    } 
-}
 
-let lastDir = player.right;
+
+let lastDir = player.rightSprite;
 
 
 function drawPlayer() {
     if (left) {
-        drawCharacter(player.left, player.x, player.y, player.width, player.height)
-        lastDir = player.left;
+        drawCharacter(player.leftSprite, player.x, player.y, player.width, player.height)
+        lastDir = player.leftSprite;
     } else if (right) {
-        drawCharacter(player.right, player.x, player.y, player.width, player.height)
-        lastDir = player.right;
+        drawCharacter(player.rightSprite, player.x, player.y, player.width, player.height)
+        lastDir = player.rightSprite;
     } else {
         drawCharacter(lastDir, player.x, player.y, player.width, player.height)
     }

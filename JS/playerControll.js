@@ -1,13 +1,20 @@
+document.getElementById('rollBt').addEventListener('click', ()=> {
+    if(playerDoneMoving === true) {
+        rollDice();
+    }
+});
+
+
 let dice;
 const diceRoll = () => {
-    dice = 7 * 400 //Math.floor((Math.random()*5 + 1)) * 400;
+    return Math.floor(((Math.random()*50) / 10) + 1) * 400;
 }
 
 
 function rollDice() {
-    diceRoll();
+    dice = diceRoll();
     playerMover();
-    console.log("dice roll is: " + dice/400);
+    document.getElementById('roll').innerText = dice/400;
     setTimeout(()=> {
         wentDown = false;
         wentUp = false;
@@ -22,18 +29,19 @@ function playerMover() {
     moving = true;
     currentX = player.x;
     console.log();
-    move();
+    move(player.x);
 }
 
 function move() {
+    
     console.log(dice);
     console.log(moved);
     
     
 
     if(player.x > 1450 && playerDoneMoving === false) {
-        player.x = 1400;
-        moved = moved - 50;
+        player.x = 1368;
+        moved += 318;
         player.y += 250;
         console.log('going down');
         
@@ -42,8 +50,8 @@ function move() {
             behavior: 'smooth'
           });
     } else if (player.x < 150 && playerDoneMoving === false) {
-        player.x = 200;
-        moved = moved - 50;
+        player.x = 168;
+        moved += 382;
         player.y += 250;
         console.log('going down');
         window.scroll({
@@ -58,6 +66,7 @@ function move() {
         moving = false;
         playerDoneMoving = true;
         cancelAnimationFrame(move);
+        location.href = "../victory.html"
         return;
     }
 

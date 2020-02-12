@@ -1,9 +1,9 @@
-let bossIdle = false;
+let bossIdle = true;
 let boss = {
     active: document.getElementById('nkActive'),
     idle: document.getElementById('nkIdle'),
-    x: 967,
-    activeX: 925,
+    x: 160,
+    activeX: 117,
     y: 2810,
     height: 140,
     idleWidth: 65,    

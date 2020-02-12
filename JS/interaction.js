@@ -93,6 +93,24 @@ function playerLocationDetection() {
     }
 }
 
+function determinFloor() {
+    for (let i = 0; i < levels.length; i++) {
+        if (player.y > levels[i].y && player.y < levels[i].yY) {
+            if (levels[i].level % 2 === 1) {
+                left = false;
+                right = true;
+            } else {
+                right = false;
+                left = true;
+            }
+           if (levels[i].level === 12) {
+                bossIdle = false;
+            } else {
+                bossIdle = true;
+            }
+        }
+    } 
+}
 
 /**
  *     if(rooms[i].roomNum === 4) {

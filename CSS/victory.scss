@@ -1,0 +1,30 @@
+html, body {
+	margin: 0;	
+	padding: 0;
+}
+
+body {
+	color: #999;
+	font: 100%/18px helvetica, arial, sans-serif;
+}
+
+a {
+	color: #2fa1d6;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #fff;	
+}
+
+#canvas-container {
+  	height: 100%;
+ 	width: 100%;
+	z-index: 2;
+}
+		
+canvas {
+	display: block;
+	z-index: 3;
+}
