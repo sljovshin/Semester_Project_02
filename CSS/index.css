@@ -3,6 +3,15 @@ html, body {
   padding: 0;
 }
 
+main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/IMG/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bannerWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,8 +20,9 @@ html, body {
 }
 
 .banner {
-  width: 600px;
-  margin: 50px auto 0 auto;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto 0 auto;
 }
 
 .gridWrapper {
@@ -25,20 +35,35 @@ html, body {
 .grid {
   display: -ms-grid;
   display: grid;
-  width: 1200px;
-  margin: 0 auto;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.character_portrait {
+  text-align: center;
 }
 
 .portrait {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-top: 2em;
+  width: 90%;
+  -webkit-filter: grayscale(2);
+          filter: grayscale(2);
 }
 
-.portrait:hover {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+.selected {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.hero:hover {
+  -webkit-filter: none;
+          filter: none;
+  cursor: pointer;
+}
+
+.empty {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 /*# sourceMappingURL=index.css.map */

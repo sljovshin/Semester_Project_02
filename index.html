@@ -14,13 +14,21 @@
         <div class="gridWrapper">
             <div class="grid">
                 <div class="character_portrait">
-                    <img class="portrait" src="/ASSETS/JonSnow_portrait.png" alt="Danerys portrait">
+                    <img class="portrait empty" src="/ASSETS/EmptyBanner.png" alt="empty portrait">
                 </div>
                 <div class="character_portrait">
-                    <img class="portrait" src="/ASSETS/danerys_portrait.png" alt="Danerys portrait">
+                    <img id="jonsnow_portrait" class="portrait hero" data-heroname="Lord Commander Jon Snow" src="/ASSETS/JonSnowBanner.png" alt="Jonsnow portrait">
+                </div>
+                <div class="character_portrait">
+                    <img id="danarys_portrait" class="portrait hero" data-heroname="Danerys Targaryen, Mother of Dragons"  src="/ASSETS/DanerysBanner.png" alt="Danerys portrait">
+                </div>
+                <div class="character_portrait">
+                    <img class="portrait empty" src="/ASSETS/EmptyBanner.png" alt="empty portrait">
                 </div>
             </div>
         </div>
+        
     </main>
+    <script src="/JS/heroselect.js"></script>
 </body>
 </html>
