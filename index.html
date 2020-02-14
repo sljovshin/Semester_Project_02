@@ -7,23 +7,41 @@
     <title>A Game of Ups and Downs</title>
 </head>
 <body>
-    <main>
-        <div class="bannerWrapper">
-            <img class="banner" src="/ASSETS/banner.png" alt="">
+    <header>
+        <div class="flexbox">
+            <div class="headerLogo">
+                <h1>A Game of Ups and Downs</h2>
+            </div>
+            <div class="headerTitle">
+                <h1>Hero selection</h1>
+            </div>
         </div>
+    </header>
+    <main>
         <div class="gridWrapper">
-            <div class="grid">
-                <div class="character_portrait">
+            <div class="grid-4">
+                <div class="character_portrait empty">
                     <img class="portrait empty" src="/ASSETS/EmptyBanner.png" alt="empty portrait">
                 </div>
                 <div class="character_portrait">
                     <img id="jonsnow_portrait" class="portrait hero" data-heroname="Lord Commander Jon Snow" src="/ASSETS/JonSnowBanner.png" alt="Jonsnow portrait">
+                    <h3>Lord Commander</h3>
+                    <h2>Jon Snow</h2>
                 </div>
                 <div class="character_portrait">
                     <img id="danarys_portrait" class="portrait hero" data-heroname="Danerys Targaryen, Mother of Dragons"  src="/ASSETS/DanerysBanner.png" alt="Danerys portrait">
+                    <h3>Mother of Dragons</h3>
+                    <h2>Danerys Targaryen</h2>
                 </div>
-                <div class="character_portrait">
+                <div class="character_portrait empty">
                     <img class="portrait empty" src="/ASSETS/EmptyBanner.png" alt="empty portrait">
+                </div>
+            </div>
+        </div>
+        <div class="ctaSection">
+            <div id="ctaBox" class="ctaBox">
+                <div id="cta" class="cta">
+                    <h2 id="ctaText">Select a hero</h2>
                 </div>
             </div>
         </div>
@@ -32,3 +50,10 @@
     <script src="/JS/heroselect.js"></script>
 </body>
 </html>
+
+
+<!--
+    <div class="bannerWrapper">
+        <img class="banner" src="/ASSETS/banner.png" alt="">
+    </div>
+-->
