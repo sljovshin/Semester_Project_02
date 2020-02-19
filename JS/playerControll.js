@@ -66,13 +66,12 @@ function move() {
         moving = false;
         playerDoneMoving = true;
         cancelAnimationFrame(move);
-        location.href = "../victory.html"
+        context.drawImage(chestOpen, 1490, 3145, 90, 60);
         return;
     }
 
     
     if(moved > dice) {
-        console.log(moved > dice);
         moving = false;
         playerDoneMoving = true;
         cancelAnimationFrame(move);

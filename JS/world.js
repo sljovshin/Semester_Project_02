@@ -9,6 +9,8 @@ let hall = document.getElementById('hallway');
 let halldoor = document.getElementById('hallwayDoor');
 let hallup = document.getElementById('hallwayUp');
 let halldown = document.getElementById('hallwayDown');
+let chestClosed = document.getElementById('chestClosed');
+let chestOpen = document.getElementById('chestOpen');
 
 let rooms= [];
 
@@ -120,6 +122,7 @@ function drawBackground(context) {
             x = 0;
         }
     }
+
 }
 
 function defineRooms() {

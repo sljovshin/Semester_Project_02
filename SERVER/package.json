@@ -1,0 +1,17 @@
+{
+  "name": "game-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start-": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "nodemon": "^2.0.2",
+    "socket.io": "*"
+  }
+}

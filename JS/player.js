@@ -14,10 +14,12 @@ function drawCharacter(char, x, y, charW, CharH) {
 
 
 let player = {
-    leftSprite: document.getElementById('jonSnowL'),
-    rightSprite: document.getElementById('jonSnowR'),
+    leftSprite: document.getElementById('danerysL'),
+    rightSprite: document.getElementById('danerysR'),
+    victorySprite: document.getElementById('danerysV'),
     x: 168,
-    y: 90,
+    //y: 90,
+    y: 3100,
     height: 110,
     width: 76,
     vx: 5,

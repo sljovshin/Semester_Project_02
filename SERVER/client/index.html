@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/lobby.css">
+    <title>A Game of Ups and Downs</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h2>Chat</h2>
+            <div id="chat" class="chat">
+            </div>
+            <div class="chatControls">
+                <textarea class="message" id="message" name="message"></textarea>
+                <div id="send" class="send">
+                    Send
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Notifications</h3>
+            <div class="serverMessages">
+            </div>
+            <h3>Online Players</h3>
+            <div class="onlinePlayers">
+                <ul id="playerList">
+
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/JS/client.js"></script>
+</html>
