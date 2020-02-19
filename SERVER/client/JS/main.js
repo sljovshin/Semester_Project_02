@@ -1,3 +1,5 @@
+// this attempts to start the game
+socket.on('attempt_start', initialize);
 //This runs everytime the server tells the player its their turn
 socket.on('not_your_turn', function() {
   rollbt.style.display = 'none';
@@ -7,19 +9,15 @@ socket.on('your_turn', function() {
   rollbt.style.display = 'block';
 });
 
+
+
 // initialize world
 
 defineRooms();
 drawBackground(context);
-window.scroll({
-  top: player.y,
-  behavior: 'smooth'
-});
 
 // spawn player
 function game() {
-  console.log(player);
-  
   context.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
   drawBackground(context);
   drawBoss();
@@ -37,7 +35,7 @@ function game() {
     setTimeout(endGame, 3000);
     return;
   }
-  requestAnimationFrame(game);
+  requestAnimationFrame(game)
 }
 
 function endGame() {
@@ -45,8 +43,23 @@ function endGame() {
 }
 
 
-socket.on('startMain', setTimeout(game(), 5000));
 
+
+function initialize() {
+    console.log('starting game');
+    
+
+  const waitForPlayerEmit = setInterval(()=> {
+    console.log('looking for players');
+    console.log(playerNumber);
+    
+    if(playerNumber !== null) {
+      player = assignHero(jon, danny, playerNumber)
+      game();
+      clearInterval(waitForPlayerEmit);
+    }
+  }, 300)
+}
 //detect player location in world
 
 

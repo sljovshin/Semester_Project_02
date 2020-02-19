@@ -32,7 +32,7 @@ function playerMover() {
     moving = true;
     currentX = player.x;
     console.log();
-    move(player.x);
+    move();
 }
 
 function move() {

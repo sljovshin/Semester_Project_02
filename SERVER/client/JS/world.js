@@ -1,4 +1,5 @@
 const socket = io('/game');
+
 let screen = document.getElementById('main')
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
@@ -11,39 +12,41 @@ let hallup = document.getElementById('hallwayUp');
 let halldown = document.getElementById('hallwayDown');
 let chestClosed = document.getElementById('chestClosed');
 let chestOpen = document.getElementById('chestOpen');
-
+let playerNumber = null; 
 let rooms= [];
 
-let player;
+let jon = {
+    leftSprite: document.getElementById('jonSnowL'),
+    rightSprite: document.getElementById('jonSnowR'),
+    victorySprite: document.getElementById('jonSnowV'),
+    x: 168,
+    y: 90,
+    height: 110,
+    width: 76,
+    vx: 5,
+    vy: 6,
+};
+let danny = {
+    leftSprite: document.getElementById('danerysL'),
+    rightSprite: document.getElementById('danerysR'),
+    victorySprite: document.getElementById('danerysV'),
+    x: 168,
+    y: 90,
+    height: 110,
+    width: 76,
+    vx: 5,
+    vy: 6,
+}
+
+let player = jon;
 socket.on('assignedHero', assignedHero);
 
 function assignedHero(num) {
-    if (num === 1) {
-        player = {
-            leftSprite: document.getElementById('jonSnowL'),
-            rightSprite: document.getElementById('jonSnowR'),
-            victorySprite: document.getElementById('jonSnowV'),
-            x: 168,
-            y: 90,
-            height: 110,
-            width: 76,
-            vx: 5,
-            vy: 6,
-        }
-    } else {
-        player = {
-            leftSprite: document.getElementById('danerysL'),
-            rightSprite: document.getElementById('danerysR'),
-            victorySprite: document.getElementById('danerysV'),
-            x: 168,
-            y: 90,
-            height: 110,
-            width: 76,
-            vx: 5,
-            vy: 6,
-        }
-    }
+    playerNumber = num
 }
+function assignHero (p1, p2, num) {
+    return num === 1 ? p1 : p2;
+  }
 
 const randomRoom = () => {
     return Math.floor(Math.random()*100);
@@ -119,10 +122,6 @@ const levels = [
         level: 13,
     },
 ];
-console.log(levels);
-
-
-
 
 function drawBackground(context) {
     const roomWidth = 400;

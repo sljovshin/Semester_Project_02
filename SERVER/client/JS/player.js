@@ -58,7 +58,7 @@ function playerMove() {
 
 
 
-let lastDir = player.rightSprite;
+//let lastDir = player.rightSprite;
 
 function drawPlayer() {
     if (left) {
@@ -68,6 +68,6 @@ function drawPlayer() {
         drawCharacter(player.rightSprite, player.x, player.y, player.width, player.height)
         lastDir = player.rightSprite;
     } else {
-        drawCharacter(lastDir, player.x, player.y, player.width, player.height)
+        //drawCharacter(lastDir, player.x, player.y, player.width, player.height)
     }
 }

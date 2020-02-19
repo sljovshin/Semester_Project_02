@@ -91,6 +91,7 @@ function firstTurn(){
 
 
 let user = 1;
+let started = false
 function gamelog(socket) {
   console.log('A player connected');
   if (user < 3) {
@@ -98,8 +99,11 @@ function gamelog(socket) {
   }
   user++;
   players.push(socket);
-  if(players.length === 2) {
-    io.emit('startMain')
+  if(players.length === 2 && started === false) {
+    players.forEach(player => {
+      player.emit('attempt_start');
+    })
+    started = true;
   }
   if(current_turn === 0) {
     firstTurn();
